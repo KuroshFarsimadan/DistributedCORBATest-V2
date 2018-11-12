@@ -1,0 +1,15 @@
+module Interfaces
+{
+  interface ServerInterface
+  {
+    string studentSemesterCourseCount(inout string studentID, inout string semester);
+  	string swapCourse(inout string studentID, inout string newCourseID, inout string oldCourseID);
+    string addCourse(inout string courseID, inout string semester);
+    string removeCourse(inout string courseID, inout string semester);
+    string listCourseAvailability(inout string semester);
+    string enrolCourse(inout string studentID, inout string courseID, inout string semester);
+    string getClassSchedule(inout string studentID);
+    string dropCourse(inout string studentID, inout string courseID);
+    oneway void shutdown();
+    };
+};
